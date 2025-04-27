@@ -71,16 +71,16 @@ def getEnv(env):
 
 
 current_path = pathlib.Path().resolve()
-dotenv_path = os.path.join(current_path, '.env')
+dotenv_path = os.path.join('/home/pablo/workspace/Receita_Federal_do_Brasil_-_Dados_Publicos_CNPJ/code/.env')
 if not os.path.isfile(dotenv_path):
-    print('Especifique o local do seu arquivo de configuração ".env". Por exemplo: C:\...\Receita_Federal_do_Brasil_-_Dados_Publicos_CNPJ\code')
+    print('Especifique o local do seu arquivo de configuração ".env". Por exemplo:')
     # C:\Aphonso_C\Git\Receita_Federal_do_Brasil_-_Dados_Publicos_CNPJ\code
     local_env = input()
     dotenv_path = os.path.join(local_env, '.env')
 print(dotenv_path)
 load_dotenv(dotenv_path=dotenv_path)
 
-dados_rf = 'http://200.152.38.155/CNPJ/'
+dados_rf = 'https://arquivos.receitafederal.gov.br/dados/cnpj/dados_abertos_cnpj/2025-03/'
 
 #%%
 # Read details from ".env" file:
